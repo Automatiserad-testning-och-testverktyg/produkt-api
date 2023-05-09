@@ -21,6 +21,7 @@ public class ProductUnitTest {
         product.setTitle("Powerboots Original Stövlar");
       String newtitle = product.getTitle();
       Assertions.assertEquals( newtitle,"Powerboots Original Stövlar");
+
     }
    
 
