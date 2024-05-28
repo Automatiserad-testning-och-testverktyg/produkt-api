@@ -21,6 +21,7 @@ public class ProductController {
 
     @GetMapping("/my-endpoint")
     ResponseEntity<String> hello(){
+        // test
         return new ResponseEntity<String>("Hello, world!", HttpStatus.OK);
     }
     @GetMapping("/products")
