@@ -21,14 +21,7 @@ class ProductTest {
     private Product product2 = new Product("Test Product 2", 20.0, "Test Category 2", "Test Description 2", "https://example.com/img/placeholder2.jpg");
 
     @Test
-    void getId_testingTheIdOfTheNewProduct() {
-        // Assertions.assertEquals();
-
-    }
-
-
-    @Test
-    void getTitle() {
+    void checkingTitleFor_Product1AndProduct2() {
         Assertions.assertAll(
                 () ->  assertEquals("Test Product", product.getTitle()),
                 () ->  assertNotEquals("Test Product 23", product2.getTitle())
@@ -37,20 +30,29 @@ class ProductTest {
     }
 
     @Test
-    void getPrice() {
+    void checkingPriceFor_Product1AndProduct2() {
+        Assertions.assertAll(
+                () ->  assertEquals(10.0, product.getPrice()),
+                () ->  assertNotEquals(30.0, product2.getPrice())
+        );
     }
 
 
     @Test
-    void getCategory() {
+    void checkingCategoryFor_Product1AndProduct2() {
+        Assertions.assertAll(
+                () ->  assertEquals("Test Category", product.getCategory()),
+                () ->  assertNotEquals("Test Category_23", product2.getCategory())
+        );
     }
 
 
     @Test
-    void getDescription() {
+    void checkingDescriptionFor_Product1AndProduct2() {
+        Assertions.assertAll(
+                () ->  assertEquals("Test Description", product.getDescription()),
+                () ->  assertNotEquals("Test Description_23", product2.getDescription())
+        );
     }
 
-    @Test
-    void getImage() {
-    }
 }
