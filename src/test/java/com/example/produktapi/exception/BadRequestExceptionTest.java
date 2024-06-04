@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class BadRequestExceptionTest {
 
     @Test
-    @DisplayName("Make sure exception message is set correctly")
+    @DisplayName("Exception message is set correctly")
     void testExceptionMessage() {
         String errorMessage = "This is an exception message";
         BadRequestException instance = assertThrows(BadRequestException.class, () -> {
@@ -22,8 +22,8 @@ class BadRequestExceptionTest {
     }
 
     @Test
-    @DisplayName("Make sure exception message handles empty strings")
-    void testExceptionMessageWithEmptyString() {
+    @DisplayName("Exception message handles empty strings")
+    void testExceptionMessage_emptyString() {
         String errorMessage = "";
         BadRequestException instance = assertThrows(BadRequestException.class, () -> {
             throw new BadRequestException(errorMessage);
@@ -35,8 +35,8 @@ class BadRequestExceptionTest {
     }
 
     @Test
-    @DisplayName("Make sure exception message handles null")
-    void testExceptionMessageWithNull() {
+    @DisplayName("Exception message handles null")
+    void testExceptionMessage_null() {
         BadRequestException instance = assertThrows(BadRequestException.class, () -> {
             throw new BadRequestException(null);
         });

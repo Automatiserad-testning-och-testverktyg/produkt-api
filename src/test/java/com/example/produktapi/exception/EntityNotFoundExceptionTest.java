@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class EntityNotFoundExceptionTest {
 
     @Test
-    @DisplayName("Make sure exception message follow expected pattern")
+    @DisplayName("Exception message follow expected pattern")
     void testExceptionMessage() {
         int id = 27;
         EntityNotFoundException instance = assertThrows(EntityNotFoundException.class, () -> {
@@ -23,7 +23,7 @@ class EntityNotFoundExceptionTest {
     }
 
     @Test
-    @DisplayName("Make sure exception message works correctly with high numbers")
+    @DisplayName("Exception message works correctly with high numbers")
     void testExceptionMessageWithHighId() {
         int id = Integer.MAX_VALUE;
         EntityNotFoundException instance = assertThrows(EntityNotFoundException.class, () -> {
