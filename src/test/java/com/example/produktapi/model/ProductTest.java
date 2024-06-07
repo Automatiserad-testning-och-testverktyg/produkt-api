@@ -1,56 +1,57 @@
 package com.example.produktapi.model;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProductTest {
 
+    //Testcases by Sweta
+
+
+    private Product product1 = new Product("Test Product", 10.0, "Test Category", "Test Description", "https://example.com/img/placeholder.jpg");
+    private Product product2 = new Product("Test Product 2", 20.0, "Test Category 2", "Test Description 2", "https://example.com/img/placeholder2.jpg");
+
     @Test
-    void getId() {
+    void checkingTitleFor_product1AndProduct2() {
+        Assertions.assertAll(
+                () ->  assertEquals("Test Product", product1.getTitle()),
+                () ->  assertNotEquals("Test Product 23", product2.getTitle())
+        );
+
     }
 
     @Test
-    void setId() {
+    void checkingPriceFor_product1AndProduct2() {
+        Assertions.assertAll(
+                () ->  assertEquals(10.0, product1.getPrice()),
+                () ->  assertNotEquals(30.0, product2.getPrice())
+        );
+    }
+
+
+    @Test
+    void checkingCategoryFor_product1AndProduct2() {
+        Assertions.assertAll(
+                () ->  assertEquals("Test Category", product1.getCategory()),
+                () ->  assertNotEquals("Test Category_23", product2.getCategory())
+        );
+    }
+
+
+    @Test
+    void checkingDescriptionFor_product1AndProduct2() {
+        Assertions.assertAll(
+                () ->  assertEquals("Test Description", product1.getDescription()),
+                () ->  assertNotEquals("Test Description_23", product2.getDescription())
+        );
     }
 
     @Test
-    void getTitle() {
+    void checkingImageDetailFor_product1() {
+        Assertions.assertEquals("https://example.com/img/placeholder.jpg",product1.getImage());
     }
 
-    @Test
-    void setTitle() {
-    }
-
-    @Test
-    void getPrice() {
-    }
-
-    @Test
-    void setPrice() {
-    }
-
-    @Test
-    void getCategory() {
-    }
-
-    @Test
-    void setCategory() {
-    }
-
-    @Test
-    void getDescription() {
-    }
-
-    @Test
-    void setDescription() {
-    }
-
-    @Test
-    void getImage() {
-    }
-
-    @Test
-    void setImage() {
-    }
 }
