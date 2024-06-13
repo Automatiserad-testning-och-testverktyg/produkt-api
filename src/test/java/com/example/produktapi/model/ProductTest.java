@@ -1,7 +1,16 @@
 package com.example.produktapi.model;
 
+
+import com.example.produktapi.service.ProductService;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+
 
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -52,6 +61,14 @@ class ProductTest {
     @Test
     void checkingImageDetailFor_product1() {
         Assertions.assertEquals("https://example.com/img/placeholder.jpg",product1.getImage());
+    }
+
+    @Test //LinnBergstroem
+    void changePriceProduct1() {
+        System.out.println(product1.getPrice());
+        product1.setPrice((double) 20.0);
+        Assertions.assertEquals(20, product1.getPrice());
+        System.out.println(product1.getPrice());
     }
 
 }
