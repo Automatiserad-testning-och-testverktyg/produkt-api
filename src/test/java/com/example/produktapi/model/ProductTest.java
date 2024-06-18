@@ -65,10 +65,37 @@ class ProductTest {
 
     @Test //LinnBergstroem
     void changePriceProduct1() {
-        System.out.println(product1.getPrice());
         product1.setPrice((double) 20.0);
         Assertions.assertEquals(20, product1.getPrice());
-        System.out.println(product1.getPrice());
+    }
+
+    // Tests by Swapnal Hardikar
+    @Test
+    void setTitle_shouldSetTitle() {
+        String expectedTitle = "New Title";
+        String oldTitle = product1.getTitle();
+        product1.setTitle(expectedTitle);
+        Assertions.assertEquals(expectedTitle,product1.getTitle());
+        Assertions.assertNotEquals(oldTitle,product1.getTitle());
+
+    }
+
+    @Test
+    void setDescription_shouldSetDescription() {
+        String oldDescription1 = product1.getDescription();
+        String oldDescription2 = product2.getDescription();
+        String expectedDescription1 = "New Description 1";
+        String expectedDescription2 = "New Description 2";
+        product1.setDescription(expectedDescription1);
+        product2.setDescription(expectedDescription2);
+
+        Assertions.assertAll(
+                () -> assertEquals(expectedDescription1,product1.getDescription()),
+                () -> assertEquals(expectedDescription2,product2.getDescription()),
+                () -> assertNotEquals(oldDescription1,product1.getDescription()),
+                () -> assertNotEquals(oldDescription2,product2.getDescription()),
+                () -> assertNotEquals(product1.getDescription(),product2.getDescription())
+        );
     }
 
 }
