@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ExceptionHandlerAdviceTest {
+public class ExceptionHandlerAdviceTest { //Skrivet av Juan Sebastian Cardona Cervantes
 
     private ExceptionHandlerAdvice exceptionHandlerAdvice;
 
