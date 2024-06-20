@@ -35,7 +35,7 @@ public class ExceptionHandlerAdviceTest { //Skrivet av Juan Sebastian Cardona Ce
     }
 
     @Test
-    @DisplayName("unitTestofHandleBadRequestException")
+    @DisplayName("handleException (BadRequestException)")
     void handleBadRequestException() {
         //Arrange
         BadRequestException badRequestException = new BadRequestException("En produkt med titeln: Example Product finns redan");
