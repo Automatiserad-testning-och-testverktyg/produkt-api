@@ -38,10 +38,7 @@ public class ExceptionHandlerAdviceTest {
     @DisplayName("unitTestofHandleBadRequestException")
     void handleBadRequestException() {
         //Arrange
-        String title = "Example Product";
-        Product product = new Product();
-        product.setTitle(title);
-        BadRequestException badRequestException = new BadRequestException("En produkt med titeln: "+ product.getTitle() + " finns redan");
+        BadRequestException badRequestException = new BadRequestException("En produkt med titeln: Example Product finns redan");
         //Act
         ResponseEntity response = exceptionHandlerAdvice.handleException(badRequestException);
         //Assert
