@@ -49,7 +49,6 @@ public class ExceptionHandlerAdviceTest { //Skrivet av Juan Sebastian Cardona Ce
     }
 
     @Test
-    @DisplayName("unitTestofHandleNullPointerException")
     void handleNullPointerException() {
         //Arrange
         NullPointerException nullPointerException = new NullPointerException();
