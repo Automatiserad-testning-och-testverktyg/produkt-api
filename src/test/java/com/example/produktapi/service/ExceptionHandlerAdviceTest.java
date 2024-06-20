@@ -21,7 +21,7 @@ public class ExceptionHandlerAdviceTest {
     }
 
     @Test
-    @DisplayName("unitTestofHandleEntityNotFoundException")
+    @DisplayName("handleException (EntityNotFoundException)")
     void handleEntityNotFoundException() {
         //Arrange
         EntityNotFoundException entityNotFoundException = new EntityNotFoundException(0);
