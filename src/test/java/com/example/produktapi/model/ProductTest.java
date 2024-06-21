@@ -75,8 +75,10 @@ class ProductTest {
         String expectedTitle = "New Title";
         String oldTitle = product1.getTitle();
         product1.setTitle(expectedTitle);
-        Assertions.assertEquals(expectedTitle,product1.getTitle());
-        Assertions.assertNotEquals(oldTitle,product1.getTitle());
+        Assertions.assertAll(
+                () -> assertEquals(expectedTitle,product1.getTitle()),
+                () -> assertNotEquals(oldTitle,product1.getTitle())
+        );
 
     }
 
