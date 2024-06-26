@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BadRequestExceptionTest {
+class BadRequestExceptionTest { // Skrivet av Jamie Blomerus
 
     @Test
     @DisplayName("Exception message is set correctly")
