@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class EntityNotFoundExceptionTest {
+class EntityNotFoundExceptionTest { // Skrivet av Jamie Blomerus
 
     @Test
     @DisplayName("Exception message follow expected pattern")
